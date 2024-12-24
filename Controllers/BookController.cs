@@ -14,9 +14,9 @@ public class BookController : ControllerBase
         _mapper = mapper;
     }
     public List<Book> Books = new List<Book>() {
-        new Book(){BookId = 1, Author = "Muhammad", Price=129.72, Title="new book"},
-        new Book(){BookId = 2, Author = "Qasas", Price=0, Title="new book2"},
-        new Book(){BookId = 3, Author = "Ahmed", Price=19.72, Title="new book3"},
+        new Book(){BookId = 1, Author = new Author(){Name = "Muhammad",Address="Egypt", College="EN"}, Price=129.72, Title="new book"},
+        new Book(){BookId = 2, Author = new Author(){Name = "Qasas",Address="Egypt", College="EN"}, Price=0, Title="new book2"},
+        new Book(){BookId = 3, Author = new Author(){Name = "Osmna",Address="Egypt", College="Medicine"}, Price=19.72, Title="new book3"},
     };
     [HttpGet]
     public IActionResult GetAllBooks() {

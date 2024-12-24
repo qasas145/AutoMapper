@@ -11,5 +11,7 @@ public class MappingProfile: Profile
         .ForMember(dest=>dest.Id, src=>src.MapFrom(src=>src.BookId))
         .ForMember(dest=>dest.IsFree, src=>src.MapFrom(src=>src.Price == 0))
         .ReverseMap();
+
+        CreateMap<Author, AuthorDTO>().ReverseMap();
     }
 }
